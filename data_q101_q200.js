@@ -1338,16 +1338,16 @@ const QUESTIONS_101_200 = [
   },
   {
     id: 197,
-    q: "An IT manager is responsible for the Network and Hardware assignment groups, each group contains 5 team members. These team members are working on many tasks, but the manager cannot see any tasks on the Service Desk > My Groups Work list. What could explain this?",
+    q: "What is the purpose of a Scheduled Job in ServiceNow?",
     opts: [
-      "A. The Assignment Group manager field is empty.",
-      "B. The manager does not have the itil role.",
-      "C. The manager is not a member of the Service Desk group.",
-      "D. The manager is not a member of the Network and Hardware groups."
+      "A. To automatically assign tasks to groups based on field criteria",
+      "B. To run a script or workflow at a specified time or recurring interval",
+      "C. To schedule data imports from external systems only",
+      "D. To create calendar reminders for users about upcoming tasks"
     ],
-    ans: "D",
-    topic: "User Administration",
-    exp: "My Groups Work muestra las tareas de los grupos de los que eres miembro. Si el manager no es miembro de esos grupos (solo manager), no aparecerán las tareas."
+    ans: "B",
+    topic: "Platform Features",
+    exp: "Un Scheduled Job (trabajo programado) ejecuta un script o flujo de trabajo en un momento específico o de forma recurrente (por ejemplo, cada noche o cada hora). Se configura en System Definition > Scheduled Jobs."
   },
   {
     id: 198,

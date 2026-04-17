@@ -113,16 +113,16 @@ const QUESTIONS_301_408 = [
   },
   {
     id: 309,
-    q: "Which ServiceNow capability allows you to provide knowledge articles, via a conversational messaging interface?",
+    q: "What is the Service Portal in ServiceNow primarily used for?",
     opts: [
-      "A. Agent Assist",
-      "B. Virtual Agent",
-      "C. Now Messenger",
-      "D. Instance Chat"
+      "A. An administrator interface for configuring platform settings",
+      "B. A self-service interface for end users to submit requests and search knowledge",
+      "C. A reporting dashboard for managers to track KPIs",
+      "D. A development environment for building custom applications"
     ],
     ans: "B",
-    topic: "Platform Features",
-    exp: "Virtual Agent permite proporcionar artículos de conocimiento a través de una interfaz de mensajería conversacional, respondiendo preguntas de usuarios automáticamente."
+    topic: "Platform Navigation",
+    exp: "El Service Portal es una interfaz de autoservicio moderna para usuarios finales, construida con widgets de AngularJS. Permite enviar solicitudes, buscar artículos de conocimiento, ver el estado de tickets y acceder a catálogos de servicios de forma amigable."
   },
   {
     id: 310,
@@ -139,83 +139,81 @@ const QUESTIONS_301_408 = [
   },
   {
     id: 311,
-    q: "What is the definition of a group?",
+    q: "What is the difference between an Assignment Group and an Assignment Rule in ServiceNow?",
     opts: [
-      "A. A collection of subject matter experts",
-      "B. A department",
-      "C. An escalation pod",
-      "D. A collection of users",
-      "E. A collection of tasks"
+      "A. They are the same thing with different names",
+      "B. An Assignment Group is a collection of users; an Assignment Rule automatically assigns records to a group or user based on criteria",
+      "C. Assignment Rules are only used in CMDB; Assignment Groups are used everywhere else",
+      "D. An Assignment Group assigns records manually; an Assignment Rule requires admin approval"
     ],
-    ans: "D",
+    ans: "B",
     topic: "User Administration",
-    exp: "Un grupo en ServiceNow es una colección de usuarios que comparten responsabilidades comunes, usado para asignación de trabajo y gestión de permisos."
+    exp: "Un Assignment Group es una colección de usuarios que pueden trabajar en tareas. Una Assignment Rule es una automatización que asigna registros automáticamente a un grupo o usuario cuando se cumplen ciertas condiciones (categoría, prioridad, etc.)."
   },
   {
     id: 312,
-    q: "Which ServiceNow utility provides a modern interactive graphical interface to visualize configuration items and their relationships?",
+    q: "What is the CI Class Manager used for in ServiceNow?",
     opts: [
-      "A. Flow Design",
-      "B. CI Class Map",
-      "C. Dependency View",
-      "D. Business Service Map"
+      "A. To import CI data from external sources into the CMDB",
+      "B. To define, view, and manage the hierarchy of CI classes in the CMDB",
+      "C. To create relationships between existing CIs automatically",
+      "D. To generate reports on CI health and availability"
     ],
-    ans: "C",
+    ans: "B",
     topic: "CMDB",
-    exp: "Dependency View es la utilidad interactiva que visualiza gráficamente los Configuration Items y sus relaciones en el CMDB de ServiceNow."
+    exp: "El CI Class Manager permite a los administradores definir, ver y gestionar la jerarquía de clases de Configuration Items en el CMDB, incluyendo sus atributos heredados y específicos."
   },
   {
     id: 313,
-    q: "What icon do you use to change the label on a Favorite?",
+    q: "What is the purpose of a System Clone in ServiceNow?",
     opts: [
-      "A. Star",
-      "B. Clock",
-      "C. Triangle",
-      "D. Pencil"
+      "A. To create a backup of the instance data in an external storage system",
+      "B. To copy the data and configuration from one instance to another (e.g., production to development)",
+      "C. To duplicate a specific application within the same instance",
+      "D. To export Update Sets from one instance to another"
     ],
-    ans: "D",
-    topic: "Platform Navigation",
-    exp: "El icono Pencil (lápiz) permite editar el nombre y el icono de un Favorito guardado en el Application Navigator."
+    ans: "B",
+    topic: "Platform Configuration",
+    exp: "System Clone copia los datos y la configuración de una instancia origen (normalmente producción) a una instancia destino (normalmente desarrollo o test). Se usa para tener datos reales en entornos de desarrollo."
   },
   {
     id: 314,
-    q: "Which tool is used to define relationships between fields in an import set table and a target table?",
+    q: "What is a Catalog Variable Set in ServiceNow?",
     opts: [
-      "A. Schema Map",
-      "B. Field Transformer",
-      "C. Transform Map",
-      "D. Transform Schema"
+      "A. A group of approval rules applied to a Catalog Item",
+      "B. A reusable collection of variables that can be shared across multiple Catalog Items",
+      "C. A set of default values automatically populated in a Catalog Item form",
+      "D. A template for creating new Catalog Items quickly"
     ],
-    ans: "C",
-    topic: "Import / Transform Maps",
-    exp: "El Transform Map define las relaciones (mappings) entre los campos de la Import Set Table y los campos de la tabla destino en ServiceNow."
+    ans: "B",
+    topic: "Service Catalog",
+    exp: "Un Catalog Variable Set es una colección reutilizable de variables que puede compartirse entre múltiples Catalog Items. Evita duplicar la configuración de variables comunes, como datos del solicitante o campos de aprobación."
   },
   {
     id: 315,
-    q: "When moving a homepage or dashboard between instances, what must you remember?",
+    q: "What is the difference between an Update Set in 'In Progress' state and one in 'Complete' state?",
     opts: [
-      "A. Download both as PDF and XML files",
-      "B. They cannot be moved via update set",
-      "C. The Platform will automatically add them to the update set",
-      "D. Manually add them to the update set"
+      "A. 'In Progress' sets capture changes automatically; 'Complete' sets are locked and ready to move",
+      "B. 'Complete' sets still capture new changes; 'In Progress' sets are read-only",
+      "C. There is no functional difference between the two states",
+      "D. 'In Progress' sets can be committed; 'Complete' sets must be retrieved first"
     ],
-    ans: "D",
+    ans: "A",
     topic: "Update Sets",
-    exp: "Las homepages y dashboards no se añaden automáticamente a los Update Sets. Debes agregarlos manualmente antes de moverlos entre instancias."
+    exp: "Un Update Set 'In Progress' captura los cambios activamente. Cuando se marca como 'Complete' queda bloqueado y listo para ser exportado y aplicado en otra instancia. No se pueden agregar más cambios en estado Complete."
   },
   {
     id: 316,
-    q: "Which allows the creation of a task-based record from Service Catalog?",
+    q: "What is the Workflow Editor in ServiceNow, and how does it differ from Flow Designer?",
     opts: [
-      "A. Record Producers",
-      "B. UI Builder",
-      "C. Assignment Rule",
-      "D. UI Actions",
-      "E. Flow Designer"
+      "A. They are identical tools with different names",
+      "B. Workflow Editor is the legacy tool for creating workflows; Flow Designer is the modern no-code/low-code replacement",
+      "C. Workflow Editor handles approvals only; Flow Designer handles all other automation",
+      "D. Flow Designer is for administrators; Workflow Editor is for end users"
     ],
-    ans: "A",
-    topic: "Service Catalog",
-    exp: "Los Record Producers son Catalog Items especiales que permiten crear registros de tareas (Incidents, Problems, etc.) directamente desde el Service Catalog."
+    ans: "B",
+    topic: "Flow Designer",
+    exp: "El Workflow Editor es la herramienta clásica (legacy) de ServiceNow para crear workflows basados en actividades. Flow Designer es su reemplazo moderno con interfaz visual no-code/low-code, mejor integración con IntegrationHub y más fácil de mantener."
   },
   {
     id: 317,
@@ -233,16 +231,16 @@ const QUESTIONS_301_408 = [
   },
   {
     id: 318,
-    q: "Which type of scripts run in the browser?",
+    q: "What is an SLA Breach in ServiceNow?",
     opts: [
-      "A. UI Policies",
-      "B. Script Include Scripts",
-      "C. Access Control Scripts",
-      "D. Business Rule Scripts"
+      "A. When an incident is assigned to the wrong team",
+      "B. When a task exceeds the response or resolution time defined in the Service Level Agreement",
+      "C. When a user submits a request outside of business hours",
+      "D. When an Update Set is applied to the wrong instance"
     ],
-    ans: "A",
-    topic: "Client Scripts",
-    exp: "Las UI Policies se ejecutan en el navegador (cliente). También los Client Scripts se ejecutan del lado del cliente. Business Rules y Script Includes se ejecutan en el servidor."
+    ans: "B",
+    topic: "Platform Features",
+    exp: "Un SLA Breach ocurre cuando una tarea supera el tiempo de respuesta o resolución definido en el Service Level Agreement. ServiceNow monitoriza continuamente los SLAs y puede disparar notificaciones o escalaciones automáticas cuando se incumple."
   },
   {
     id: 319,
@@ -300,16 +298,16 @@ const QUESTIONS_301_408 = [
   },
   {
     id: 323,
-    q: "What are the steps for importing data using an import set?",
+    q: "Which of the following is true about Script Includes in ServiceNow?",
     opts: [
-      "A. Create Import Set; Create transform map; Transform data; Clean up import table",
-      "B. Create a Transform Map; Load Data; Run Transform Map Script",
-      "C. Identify source; Import transform map; Run transformer; Verify import",
-      "D. Select source file; Run AutoMap; Transform data; Clean up target table"
+      "A. Script Includes run in the browser when a form loads",
+      "B. Script Includes are reusable server-side JavaScript libraries called by other scripts",
+      "C. Script Includes replace Business Rules for database operations",
+      "D. Script Includes are only available in scoped applications"
     ],
-    ans: "A",
-    topic: "Import / Transform Maps",
-    exp: "Los pasos del proceso de Import Set son: Crear Import Set → Crear Transform Map → Transformar datos → Limpiar la tabla de import."
+    ans: "B",
+    topic: "Business Rules",
+    exp: "Los Script Includes son bibliotecas de JavaScript reutilizables del lado del servidor que pueden ser llamadas por Business Rules, otros Script Includes o REST APIs. Se ejecutan en el servidor, no en el cliente."
   },
   {
     id: 324,
@@ -327,43 +325,42 @@ const QUESTIONS_301_408 = [
   },
   {
     id: 325,
-    q: "What module enables an administrator to define destinations for imported data on any ServiceNow table?",
+    q: "What is the purpose of an Inbound Email Action in ServiceNow?",
     opts: [
-      "A. Load Data",
-      "B. Field Transform",
-      "C. Schema Map",
-      "D. Transform Map"
+      "A. To send automatic email replies to users when a record is created",
+      "B. To process incoming emails and automatically create or update records based on defined rules",
+      "C. To filter spam emails before they reach user inboxes",
+      "D. To forward emails from ServiceNow to external ticketing systems"
     ],
-    ans: "D",
-    topic: "Import / Transform Maps",
-    exp: "El Transform Map define el destino de los datos importados, especificando a qué tabla y campos de ServiceNow se mapea cada campo del Import Set."
+    ans: "B",
+    topic: "Platform Features",
+    exp: "Las Inbound Email Actions procesan los emails entrantes y crean o actualizan registros automáticamente en ServiceNow basándose en reglas definidas, como el asunto del email o la dirección del remitente."
   },
   {
     id: 326,
-    q: "Which ServiceNow capability provides assistance to help users obtain information, make decisions, and perform common work tasks via a messaging interface?",
+    q: "What is Agent Workspace in ServiceNow?",
     opts: [
-      "A. Now Support",
-      "B. ServiceNow Messenger",
-      "C. Agent Workspace",
-      "D. Virtual Agent",
-      "E. Knowledge Chat"
+      "A. A module for configuring chatbot responses for Virtual Agent",
+      "B. A unified interface for service desk agents to manage cases, chats and tasks from a single screen",
+      "C. A reporting dashboard showing agent performance metrics",
+      "D. A plugin that replaces the standard Now Platform UI for all users"
     ],
-    ans: "D",
-    topic: "Platform Features",
-    exp: "Virtual Agent es la capacidad de ServiceNow que proporciona asistencia conversacional para obtener información, tomar decisiones y completar tareas comunes."
+    ans: "B",
+    topic: "Platform Navigation",
+    exp: "Agent Workspace es una interfaz unificada diseñada para agentes de service desk que permite gestionar casos, chats en tiempo real y tareas desde una sola pantalla, mejorando la productividad y la experiencia del agente."
   },
   {
     id: 327,
-    q: "What instance resource allows you to access guided tours, information about actions, and instructions on how to use inputs and outputs in your flow?",
+    q: "What is an Outbound REST Message in ServiceNow used for?",
     opts: [
-      "A. Now Support",
-      "B. Community",
-      "C. Docs",
-      "D. Help Panel (question mark icon)"
+      "A. To receive data from external systems via REST API",
+      "B. To send HTTP requests from ServiceNow to external REST APIs",
+      "C. To expose ServiceNow table data as a REST endpoint",
+      "D. To import data using the REST import set processor"
     ],
-    ans: "D",
-    topic: "Flow Designer",
-    exp: "El Help Panel (icono de signo de interrogación) en Flow Designer da acceso a tours guiados, información sobre acciones e instrucciones de uso de inputs/outputs."
+    ans: "B",
+    topic: "Platform Features",
+    exp: "Un Outbound REST Message permite a ServiceNow enviar solicitudes HTTP (GET, POST, PUT, DELETE) a APIs REST externas. Se configura en System Web Services > Outbound > REST Message y puede invocarse desde Business Rules, Flow Designer o Script Includes."
   },
   {
     id: 328,
@@ -1305,16 +1302,16 @@ const QUESTIONS_301_408 = [
   },
   {
     id: 398,
-    q: "What is used frequently to move customizations from one instance to another?",
+    q: "What is the difference between a ServiceNow Application and a Plugin?",
     opts: [
-      "A. UI Script Includes",
-      "B. Application Files",
-      "C. Table Templates",
-      "D. Update Sets"
+      "A. Applications are built by ServiceNow only; Plugins are built by customers",
+      "B. Applications are custom solutions built on the platform; Plugins are pre-built features that extend platform functionality and are activated, not installed",
+      "C. Plugins replace Applications when activated",
+      "D. There is no difference; the terms are interchangeable"
     ],
-    ans: "D",
-    topic: "Update Sets",
-    exp: "Los Update Sets son el mecanismo más utilizado para mover personalizaciones entre instancias de ServiceNow (Development → Test → Production)."
+    ans: "B",
+    topic: "Platform Configuration",
+    exp: "Una Application es una solución personalizada construida sobre la plataforma (como ITSM, HRSD o apps propias). Un Plugin es una funcionalidad pre-construida por ServiceNow que se activa en la instancia para añadir capacidades adicionales. Los plugins no se desinstalan una vez activados."
   },
   {
     id: 399,

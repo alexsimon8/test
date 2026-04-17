@@ -3,18 +3,16 @@
 const QUESTIONS_201_300 = [
   {
     id: 201,
-    q: "On the Reports page, what sections allow you to see which reports are visible to different audiences? (Choose four.)",
+    q: "Which type of report is best suited for displaying data trends over a period of time?",
     opts: [
-      "A. Group",
-      "B. Department",
-      "C. My reports",
-      "D. Team",
-      "E. Global",
-      "F. All"
+      "A. Pie chart",
+      "B. Bar chart",
+      "C. Time Series (Line chart)",
+      "D. Histogram"
     ],
-    ans: "ACEF",
+    ans: "C",
     topic: "Reporting & Metrics",
-    exp: "En la página de Reports, las secciones que controlan visibilidad a diferentes audiencias son: Group (A), My reports (C), Global (E) y All (F)."
+    exp: "Un Time Series (gráfico de línea) es el tipo de reporte más adecuado para visualizar tendencias de datos a lo largo del tiempo, mostrando cómo evolucionan los valores en períodos definidos."
   },
   {
     id: 202,
@@ -273,59 +271,47 @@ const QUESTIONS_201_300 = [
   },
   {
     id: 221,
-    q: "What would you do, on a list, if you wanted to show the records in groups, based on the column category? (Choose two.)",
+    q: "From a related list, what would a user click to personalize the layout of the columns?",
     opts: [
-      "A. On list Context Menu, select Group By > Category",
-      "B. On the Filter Menu, select Group By > Category",
-      "C. Click Group On icon, select Category",
-      "D. On Navigator Filter, type tablename.group.category and press enter",
-      "E. On the Category column title, click Context menu > Group By Category"
+      "A. Gear",
+      "B. Context Menu",
+      "C. Pencil",
+      "D. Magnifier"
     ],
-    ans: "AE",
+    ans: "A",
     topic: "Lists & Filters",
-    exp: "Para agrupar por categoría desde la lista: usa el Context Menu de la lista > Group By > Category (A) o haz clic en el título de la columna Category > Group By Category (E)."
+    exp: "Para personalizar el diseño de columnas desde una lista relacionada, el usuario hace clic en el icono Gear (engranaje), que abre las opciones de personalización de columnas."
   },
   {
     id: 222,
-    q: "To apply a UI Policy to all views, which field should be set to true in its definition record?",
+    q: "What is the language used for scripting in ServiceNow?",
     opts: [
-      "A. Global",
-      "B. Reverse if false",
-      "C. On load",
-      "D. Inherit"
+      "A. C++",
+      "B. JavaScript",
+      "C. PHP",
+      "D. Python"
     ],
-    ans: "A",
-    topic: "UI Development",
-    exp: "Para que una UI Policy aplique a todas las vistas del formulario, el campo 'Global' debe estar marcado como true en el registro de definición de la UI Policy."
+    ans: "B",
+    topic: "Business Rules",
+    exp: "JavaScript es el lenguaje de scripting utilizado en ServiceNow, tanto para Client Scripts (lado del cliente/navegador) como para Business Rules y Script Includes (lado del servidor)."
   },
   {
     id: 223,
-    q: "What are the steps for importing data using an import set?",
+    q: "What are examples of UI Actions, relating to Lists? (Choose four.)",
     opts: [
-      "A. Select source file; Run automap; Transform data; Clean up target table",
-      "B. Identity source; Import transform map; Run transformer; Verify import",
-      "C. Setup LDAP; Test map; Create update set; Run import; Apply update set",
-      "D. Load the data; Create transform map; Transform data; Clean up import table"
+      "A. List Links",
+      "B. List Choices",
+      "C. List Buttons",
+      "D. List Override",
+      "E. List Context Menu",
+      "F. List Control"
     ],
-    ans: "D",
-    topic: "Import / Transform Maps",
-    exp: "Los pasos estándar para importar datos usando Import Sets son: Cargar datos → Crear transform map → Transformar datos → Limpiar la tabla de import."
+    ans: "ABCE",
+    topic: "UI Development",
+    exp: "Los tipos de UI Actions relacionadas con listas son: List Links (A), List Choices (B), List Buttons (C) y List Context Menu (E). List Override y List Control no son tipos de UI Action estándar."
   },
   {
     id: 224,
-    q: "When moving a homepage or dashboard between instances, what must you remember?",
-    opts: [
-      "A. Manually add them to the update set",
-      "B. They cannot be moved via update set",
-      "C. They are automatically added to the update set",
-      "D. Create a separate update set for them"
-    ],
-    ans: "A",
-    topic: "Update Sets",
-    exp: "Las homepages y dashboards NO se agregan automáticamente a los Update Sets. Debes agregarlos manualmente al Update Set antes de mover entre instancias."
-  },
-  {
-    id: 225,
     q: "A Service Catalog project will involve building 80 catalog items. For each of the catalog items, the following fields will be mandatory on the forms: Requested for, Requested by, Approving manager, Delivery instructions. All of the other variables will be specific to the individual catalog item. What features would you use when designing the catalog item form?",
     opts: [
       "A. Create a Variable Set Template; then apply to all of the catalog items.",
@@ -336,7 +322,20 @@ const QUESTIONS_201_300 = [
     ],
     ans: "B",
     topic: "Service Catalog",
-    exp: "La solución eficiente es crear un único Variable Set con los 4 campos comunes y luego agregarlo a cada uno de los 80 Catalog Items, evitando configuración duplicada."
+    exp: "La solución eficiente es crear un único Variable Set con los 4 campos comunes y luego agregarlo a cada uno de los 80 Catalog Items, evitando configuración duplicada y facilitando el mantenimiento."
+  },
+  {
+    id: 225,
+    q: "A task worker asks how they can monitor any updates occurring to records assigned to him, like responses from customers. What do you suggest?",
+    opts: [
+      "A. On My Work list, select the Activity Stream icon to show a frame with live updates",
+      "B. Click on the eyeglass icon to expand the Monitor frame",
+      "C. Open an Agent workspace tab for each record he wants to monitor",
+      "D. Select Service Desk > My Work Dashboard"
+    ],
+    ans: "A",
+    topic: "Forms & Fields",
+    exp: "Desde el módulo My Work list, el trabajador puede seleccionar el icono Activity Stream para ver un panel con las actualizaciones en tiempo real de los registros asignados."
   },
   {
     id: 226,
@@ -367,17 +366,16 @@ const QUESTIONS_201_300 = [
   },
   {
     id: 228,
-    q: "When importing data from a spreadsheet, which step defines where the incoming data columns will be written in the receiving table?",
+    q: "To apply a UI Policy to all views, which field should be set to true in its definition record?",
     opts: [
-      "A. Select Data Source",
-      "B. Schedule Transform",
-      "C. Load Data",
-      "D. Create Transform Map",
-      "E. Field Alignment"
+      "A. Global",
+      "B. Reverse if false",
+      "C. On load",
+      "D. Inherit"
     ],
-    ans: "D",
-    topic: "Import / Transform Maps",
-    exp: "Create Transform Map define el destino de cada columna del origen en la tabla receptora de ServiceNow, estableciendo el mapeo campo a campo."
+    ans: "A",
+    topic: "UI Development",
+    exp: "Para que una UI Policy aplique a todas las vistas del formulario, el campo 'Global' debe estar marcado como true en el registro de definición de la UI Policy."
   },
   {
     id: 229,
@@ -635,17 +633,16 @@ const QUESTIONS_201_300 = [
   },
   {
     id: 248,
-    q: "On the knowledge base record, which tab would you use to define which users are not able to write articles to the knowledge base?",
+    q: "What happens to a Knowledge Article that is placed in 'Retired' state?",
     opts: [
-      "A. Can Contribute",
-      "B. Cannot Author",
-      "C. Can Read",
-      "D. Can Write",
-      "E. Can Author"
+      "A. It is permanently deleted from the database",
+      "B. It is no longer visible in search results but remains in the system",
+      "C. It is sent back to Draft state automatically for revision",
+      "D. It is archived to a separate read-only database"
     ],
-    ans: "A",
+    ans: "B",
     topic: "Knowledge Management",
-    exp: "La pestaña 'Can Contribute' muestra quién puede escribir artículos. Para definir quién NO puede escribir, se gestiona desde esta misma sección excluyendo usuarios/grupos."
+    exp: "Cuando un artículo de Knowledge Base pasa a estado 'Retired' (Retirado), deja de aparecer en los resultados de búsqueda para los usuarios finales, pero permanece en el sistema para consulta administrativa."
   },
   {
     id: 249,
@@ -716,16 +713,16 @@ const QUESTIONS_201_300 = [
   },
   {
     id: 254,
-    q: "Which banner icon do you use to change your personal system settings, like your instance color scheme?",
+    q: "What is a Gauge in ServiceNow?",
     opts: [
-      "A. Magnifier",
-      "B. Question mark",
-      "C. Gear",
-      "D. Chat bubbles"
+      "A. A type of ACL rule that measures security compliance",
+      "B. A real-time data visualization widget displayed on Homepages and Dashboards",
+      "C. A metric used to calculate SLA breach percentages",
+      "D. A component in Flow Designer for measuring execution time"
     ],
-    ans: "C",
-    topic: "Platform Navigation",
-    exp: "El icono Gear (engranaje) en el banner da acceso a System Settings personales, donde puedes cambiar el tema de color, accesibilidad y otras preferencias."
+    ans: "B",
+    topic: "Reporting & Metrics",
+    exp: "Un Gauge es un widget de visualización en tiempo real que se añade a Homepages y Dashboards para mostrar métricas clave como número de incidentes abiertos, SLA compliance, etc."
   },
   {
     id: 255,
@@ -988,16 +985,16 @@ const QUESTIONS_201_300 = [
   },
   {
     id: 274,
-    q: "What is a sys_id?",
+    q: "What is the primary purpose of the MID Server in ServiceNow?",
     opts: [
-      "A. Unique 32-character identifier that is assigned to every record",
-      "B. A client-side Business Rule",
-      "C. A server-side Business Rule",
-      "D. Unique 64-character identifier that is assigned to every record"
+      "A. To host the ServiceNow database on-premise",
+      "B. To act as a bridge between the ServiceNow instance and resources inside a corporate network",
+      "C. To provide a backup of the ServiceNow instance",
+      "D. To run client-side scripts faster by offloading processing"
     ],
-    ans: "A",
-    topic: "Tables & Database",
-    exp: "El sys_id es un identificador único de 32 caracteres (UUID/GUID) asignado automáticamente a cada registro en ServiceNow para identificarlo de forma única en toda la plataforma."
+    ans: "B",
+    topic: "Platform Features",
+    exp: "El MID Server (Management, Instrumentation, and Discovery Server) actúa como puente entre la instancia cloud de ServiceNow y los recursos de la red corporativa, permitiendo Discovery, integrations e ITSM operations detrás del firewall."
   },
   {
     id: 275,
@@ -1027,16 +1024,16 @@ const QUESTIONS_201_300 = [
   },
   {
     id: 277,
-    q: "On what part of the ServiceNow instance, would you find the option to Impersonate User?",
+    q: "When would an administrator use the 'Elevate Roles' feature in ServiceNow?",
     opts: [
-      "A. User Menu",
-      "B. Content Frame",
-      "C. Application Navigator",
-      "D. Module"
+      "A. To permanently add a new role to their user account",
+      "B. To temporarily gain access to high-security settings like security_admin for the current session",
+      "C. To grant another user elevated permissions without logging out",
+      "D. To bypass ACL rules during an emergency"
     ],
-    ans: "A",
-    topic: "User Administration",
-    exp: "La opción Impersonate User se encuentra en el User Menu (menú de usuario), accesible haciendo clic en el nombre del usuario o icono de perfil en el banner."
+    ans: "B",
+    topic: "Security / Access Control",
+    exp: "Elevate Roles permite a un administrador obtener temporalmente roles de alta seguridad como security_admin para la sesión actual. Al cerrar sesión, el rol elevado desaparece. Es una medida de seguridad que evita el uso accidental de permisos elevados."
   },
   {
     id: 278,
@@ -1323,29 +1320,28 @@ const QUESTIONS_201_300 = [
   },
   {
     id: 299,
-    q: "What is the most common role that has access to almost all platform features, functions, and data?",
+    q: "What is the purpose of the Preview step when applying an Update Set?",
     opts: [
-      "A. Super User [sn_super_user]",
-      "B. Security Admin [security_admin]",
-      "C. System Administrator [admin]",
-      "D. Base Admin [base_admin]",
-      "E. System Manager [sys_manager]"
-    ],
-    ans: "C",
-    topic: "Security / Access Control",
-    exp: "System Administrator [admin] es el rol más común con acceso a casi todas las funciones y datos de la plataforma. Es el rol de administrador estándar en ServiceNow."
-  },
-  {
-    id: 300,
-    q: "When moving multiple update sets at one time, what might you do to facilitate the move?",
-    opts: [
-      "A. Preview",
-      "B. Batch",
-      "C. List",
-      "D. Map"
+      "A. To display a visual preview of the UI changes in the target instance",
+      "B. To identify potential conflicts or errors before committing the Update Set",
+      "C. To test the Update Set in a sandbox environment automatically",
+      "D. To notify other administrators that an Update Set is about to be applied"
     ],
     ans: "B",
     topic: "Update Sets",
-    exp: "La función Batch permite agrupar y mover múltiples Update Sets simultáneamente, simplificando el proceso de migración cuando hay varios conjuntos de cambios."
+    exp: "El paso Preview analiza el Update Set antes de aplicarlo y detecta posibles conflictos con personalizaciones existentes en la instancia destino. Permite resolver problemas antes del Commit."
+  },
+  {
+    id: 300,
+    q: "Which of the following correctly describes a Remote Update Set?",
+    opts: [
+      "A. An Update Set created on a remote instance that has been retrieved for local application",
+      "B. An Update Set stored in a cloud backup service",
+      "C. An Update Set that syncs changes in real time between two instances",
+      "D. An Update Set applied directly from the source instance without retrieval"
+    ],
+    ans: "A",
+    topic: "Update Sets",
+    exp: "Un Remote Update Set es un Update Set que ha sido exportado desde otra instancia (fuente) y recuperado (retrieved) en la instancia local para su revisión y aplicación mediante Preview y Commit."
   }
 ];
